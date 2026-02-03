@@ -11,7 +11,7 @@ router.register(r'employees',EmployeeViewSet,basename='employee')
 router.register(r'candidates',CandidateViewsets)
 router.register(r'interviews',InterviewViewset)
 
-
+#
 urlpatterns =[
     path('api/',include(router.urls)),
 ]
