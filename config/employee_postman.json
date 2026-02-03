@@ -1,0 +1,448 @@
+{
+  "info": {
+    "name": "Recruitment API (Django DRF)",
+    "_postman_id": "a5e90d3e-0000-0000-0000-000000000000",
+    "description": "Postman collection for HR / Interview system built with Django REST Framework.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "HR",
+      "item": [
+        {
+          "name": "List HRs",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/hrs/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "hrs",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create HR",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Alice HR\",\n  \"email\": \"alice.hr@techcorp.com\",\n  \"region\": \"APAC\",\n  \"salary\": 90000,\n  \"performance_score\": 4.5\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/hrs/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "hrs",
+                ""
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Developer",
+      "item": [
+        {
+          "name": "List Developers",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/developers/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "developers",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Developer",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Bob Dev\",\n  \"email\": \"bob.dev@techcorp.com\",\n  \"primary_skill\": \"Python\",\n  \"salary\": 120000,\n  \"performance_score\": 4.2\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/developers/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "developers",
+                ""
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Manager",
+      "item": [
+        {
+          "name": "List Managers",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/managers/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "managers",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Manager",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Carol Manager\",\n  \"email\": \"carol.mgr@techcorp.com\",\n  \"team_name\": \"Platform Team\",\n  \"salary\": 150000,\n  \"performance_score\": 4.8\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/managers/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "managers",
+                ""
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Employee (Read-only)",
+      "item": [
+        {
+          "name": "List All Employees",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/employees/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "employees",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Retrieve Employee by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/employees/1/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "employees",
+                "1",
+                ""
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Candidate",
+      "item": [
+        {
+          "name": "List Candidates",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/candidates/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "candidates",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Candidate",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Vishal Candidate\",\n  \"email\": \"vishal.candidate@example.com\",\n  \"skills\": [\"Python\", \"Django\", \"REST\"],\n  \"experience_years\": 5\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/candidates/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "candidates",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Schedule Interview for Candidate",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"hr_id\": 1,\n  \"interviewer_ids\": [2, 3],\n  \"scheduled_at\": \"2026-01-10T10:00:00Z\",\n  \"location\": \"Zoom Meeting Room 1\",\n  \"note\": \"Strong resume, schedule tech round\",\n  \"question_set_id\": null\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/candidates/1/schedule_interview/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "candidates",
+                "1",
+                "schedule_interview",
+                ""
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Question Set",
+      "item": [
+        {
+          "name": "List Question Sets",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/question-sets/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "question-sets",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Question Set",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Custom Python Questions\",\n  \"target_role\": \"Developer\",\n  \"questions\": [\n    \"Explain OOP in Python.\",\n    \"What is GIL?\",\n    \"Difference between threading and asyncio?\"\n  ]\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/question-sets/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "question-sets",
+                ""
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Interview",
+      "item": [
+        {
+          "name": "List Interviews",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/interviews/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "interviews",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Retrieve Interview by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/interviews/1/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "interviews",
+                "1",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Evaluate Interview (Add Feedbacks)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "[\n  {\n    \"interviewer_id\": 2,\n    \"score\": 4,\n    \"comments\": \"Strong Python skills\",\n    \"extra_data\": {\n      \"technical_match\": true\n    }\n  },\n  {\n    \"interviewer_id\": 3,\n    \"score\": 5,\n    \"comments\": \"Good leadership potential\",\n    \"extra_data\": {\n      \"leadership_potential\": true\n    }\n  }\n]"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/interviews/1/evaluate/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "interviews",
+                "1",
+                "evaluate",
+                ""
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Feedback",
+      "item": [
+        {
+          "name": "List Feedbacks",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/feedbacks/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "feedbacks",
+                ""
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:8000"
+    }
+  ]
+}

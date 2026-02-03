@@ -1,0 +1,6 @@
+django
+djangorestframework
+django-silk
+celery
+redis
+djangorestframework-simplejwt
